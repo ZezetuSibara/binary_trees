@@ -1,21 +1,20 @@
 #ifndef BINARY_TREES
 #define BINARY_TREES
 
+#include <stdlib>
 #include <stddef.h>
-#include <stdlib.h>
+#include <string>
 #include <stdio.h>
-#include <string.h>
 #include <unistd.h>
-#include <math.h>
 #include <limits.h>
+#include <math.h>
 
 /**
- * struct binary_tree_s - Binary tree node
- *
- * @n: Integer stored in the node
- * @parent: Pointer to the parent node
- * @left: Pointer to the left child node
- * @right: Pointer to the right child node
+ * struct binary_tree_s - Node of a Binary tree
+ * @n: The node where the integer will be stored
+ * @parent: The parent node is pointed to
+ * @left: The left child node is pointed to
+ * @right: The right child node is pointed to
  */
 struct binary_tree_s
 {
@@ -53,16 +52,16 @@ size_t binary_tree_nodes(const binary_tree_t *tree);
 int binary_tree_balance(const binary_tree_t *tree);
 int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
-binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 
 /* Advanced tasks */
 binary_tree_t *binary_trees_ancestor(const binary_tree_t *first,
 const binary_tree_t *second);
 void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 int binary_tree_is_complete(const binary_tree_t *tree);
-binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 binary_tree_t *binary_tree_rotate_right(binary_tree_t *tree);
+binary_tree_t *binary_tree_rotate_left(binary_tree_t *tree);
 int binary_tree_is_bst(const binary_tree_t *tree);
 bst_t *bst_insert(bst_t **tree, int value);
 bst_t *array_to_bst(int *array, size_t size);
@@ -71,8 +70,8 @@ bst_t *bst_remove(bst_t *root, int value);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 int binary_tree_is_avl(const binary_tree_t *tree);
 avl_t *avl_insert(avl_t **tree, int value);
-avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
+avl_t *array_to_avl(int *array, size_t size);
 int binary_tree_is_heap(const binary_tree_t *tree);
 heap_t *heap_insert(heap_t **root, int value);
 heap_t *array_to_heap(int *array, size_t size);

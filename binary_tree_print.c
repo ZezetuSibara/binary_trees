@@ -1,19 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include "binary_trees.h"
-
-/* Original code from http://stackoverflow.com/a/13755911/5184480 */
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 /**
- * print_t - Stores recursively each level in an array of strings
- *
- * @tree: Pointer to the node to print
- * @offset: Offset to print
- * @depth: Depth of the node
- * @s: Buffer
- *
- * Return: length of printed tree after process
+ * print_t - Each levelis recursively stored
+ * @tree: Points to the printed node
+ * @offset: Offset to be printed
+ * @depth: The node depth
+ * @s: A buffer
+ * Return: Printed tree length post process
  */
 static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 {
@@ -45,10 +41,8 @@ static int print_t(const binary_tree_t *tree, int offset, int depth, char **s)
 
 /**
  * _height - Measures the height of a binary tree
- *
- * @tree: Pointer to the node to measures the height
- *
- * Return: The height of the tree starting at @node
+ * @tree: Points to the node measuring the height
+ * Return: The tree's height starting at @node
  */
 static size_t _height(const binary_tree_t *tree)
 {
@@ -61,9 +55,8 @@ static size_t _height(const binary_tree_t *tree)
 }
 
 /**
- * binary_tree_print - Prints a binary tree
- *
- * @tree: Pointer to the root node of the tree to print
+ * binary_tree_print - A binary tree is printed
+ * @tree: Points to the root node
  */
 void binary_tree_print(const binary_tree_t *tree)
 {
